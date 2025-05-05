@@ -6,7 +6,7 @@ const About = () => {
   //hlo
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white rounded-2xl m-8 shadow-2xl">
+    <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-white rounded-2xl m-8 shadow-2xl">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">About Modern CPA</h2>
         <p className="text-xl text-gray-600 mb-8 text-center">

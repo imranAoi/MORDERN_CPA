@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { RiContactsBookFill } from "react-icons/ri"
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false)
@@ -13,6 +14,25 @@ export default function Header() {
     console.log('Searching for:', searchQuery)
     
   }
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    document.getElementById('about')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+  const scrollToService = (e) => {
+    e.preventDefault();
+    document.getElementById('services')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+  const scrollToTestimonials= (e) => {
+    e.preventDefault();
+    document.getElementById('testimonials')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm">
@@ -26,10 +46,10 @@ export default function Header() {
 
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">About us</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Services</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+            <a href="#about" onClick={scrollToAbout} className="text-gray-300 hover:text-white transition-colors">About us</a>
+            <a href="#services" onClick={scrollToService} className="text-gray-300 hover:text-white transition-colors">Services</a>
+            <a href="#testimonials" onClick={scrollToTestimonials} className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
+            <Link to={'/Contact'} className="text-gray-300 hover:text-white transition-colors">Contact</Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">

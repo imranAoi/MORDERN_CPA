@@ -4,8 +4,10 @@ import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 
-import ServicesSlider from './components/ServiceSlider';
+
 import Testimonials from './components/Testimonials';
+import ServicesSection from './components/ServicesSection';
+
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
       <Header/>
       <Home/>
       <About/>
+      <ServicesSection/>
       <Testimonials/>
-      <ServicesSlider/>
       <Footer/>
     </div>
   );
